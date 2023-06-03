@@ -1,0 +1,59 @@
+@charset "UFT-8";
+@use "./h-fonts" as F;
+@use "./h-colors" as C;
+
+.Header{
+    background-image: url(./img/bg-hero-desktop.svg);
+    background-color: C.$c-cyanPale;
+    font-family: F.$f-poppins;
+
+    & section{
+        padding: 2rem 5rem;
+        
+        & article header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5rem;
+
+            & ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2rem;
+                width: 12rem;
+                height: 3rem;
+                background-color: C.$c-white;
+            }
+        }
+
+        & article main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            & div{
+                width: 30%;
+                
+
+                & h1{
+                    font-size: 2.5rem;
+
+                }
+                & ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 2.5rem;
+                    border-radius: 2rem;
+                    width: 20rem;
+                    height: 4rem;
+                    background-color: C.$c-pink;
+                    color: C.$c-white;
+                }
+
+            }
+        }
+            
+    }
+}

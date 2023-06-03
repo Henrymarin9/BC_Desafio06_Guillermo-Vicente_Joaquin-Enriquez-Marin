@@ -1,0 +1,25 @@
+@charset "UFT-8";
+@use "./h-fonts" as F;
+
+.Main{
+    margin: 10rem 15rem;
+    
+    & section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+
+        & article{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            padding: 5rem;
+
+            & main{
+                width: 50%;
+            }
+        }
+    }
+}
