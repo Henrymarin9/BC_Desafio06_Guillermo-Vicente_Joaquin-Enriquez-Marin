@@ -1,8 +1,10 @@
 @charset "UFT-8";
-@use "./h-fonts" as F;
+@use "./_h-fonts" as F;
 
 .Main{
+    font-family: F.$f-openSans;
     margin: 10rem 15rem;
+
     
     & section{
         display: grid;
