@@ -10,13 +10,13 @@
     padding: 3rem 6rem 3rem 6rem;
     @include M.Grilla(2, 3, 1, 13);
 
-    & section {
+    & .Section {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 3rem;
 
-        & article {
+        & .article {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24,7 +24,7 @@
             border-radius: 0.5rem;
             box-shadow: 0 0px 20px C.$c-sombraMain;
 
-            & main {
+            & .main {
                 width: 50%;
             }
 
@@ -47,50 +47,50 @@
 @media screen and (max-width: BP.$breakPoint--md) {
     .Main {
         @include M.Grilla(2, 3, 1, 13);
-    }
 
-    .Main section {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        gap: 3rem;
+        & .Section {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 3rem;
 
-        & article {
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            border-radius: 2rem;
-            padding-bottom: 5rem;
-
-            & main {
-                width: 100%;
-            }
-
-            & h2 {
-                @include M.Texto(F.$f-poppins, 2rem, 900, 2);
-                margin-top: 2rem;
-                text-align: center;
+            & .article {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
                 padding: 2rem;
+                border-radius: 2rem;
+                padding-bottom: 5rem;
+
+                & .main {
+                    width: 100%;
+                }
+
+                & h2 {
+                    @include M.Texto(F.$f-poppins, 2rem, 900, 2);
+                    margin-top: 2rem;
+                    text-align: center;
+                    padding: 2rem;
+                }
+
+                & p {
+                    @include M.Texto(F.$f-poppins, 1.5rem, 100, 1);
+                    color: C.$c-grey;
+                    text-align: center;
+                    padding: 0rem;
+                }
             }
 
-            & p {
-                @include M.Texto(F.$f-poppins, 1.5rem, 100, 1);
-                color: C.$c-grey;
-                text-align: center;
-                padding: 0rem;
+            & .article:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                padding-bottom: 5rem;
+                border-radius: 2rem;
             }
-        }
-
-        & article:nth-child(2) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            padding-bottom: 5rem;
-            border-radius: 2rem;
         }
     }
 }

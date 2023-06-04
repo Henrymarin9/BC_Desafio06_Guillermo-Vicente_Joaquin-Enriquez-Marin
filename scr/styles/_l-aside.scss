@@ -9,7 +9,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: C.$c-white;
     color: C.$c-cyanDark;
     width: 50vw;
     height: 250px;
@@ -20,7 +20,7 @@
     z-index: 1;
     box-shadow: 0 5px 10px C.$c-grayish-Blue;
 
-    & header {
+    & .main {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,11 +28,11 @@
         padding: 2rem;
     }
 
-    & header h3 {
+    & .main  h3 {
         @include M.Texto(F.$f-poppins, 2rem, 400, C.$c-cyanDark);
     }
 
-    & header button {
+    & .main .button {
         background-color: C.$c-pink;
         color: C.$c-white;
         border: none;

@@ -24,17 +24,17 @@ html {
   grid-column-start: 1;
   grid-column-end: 13;
 }
-.Header section {
+.Header .Section {
   padding: 2rem 3rem;
 }
-.Header section article header {
+.Header .Section .article .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
   margin-bottom: 2rem;
 }
-.Header section article header ul {
+.Header .Section .article .header ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,15 +43,16 @@ html {
   height: 3rem;
   background-color: white;
 }
-.Header section article main {
+.Header .Section .article .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 3rem;
 }
-.Header section article main section {
+.Header .Section .article .main .section {
   width: 50%;
 }
-.Header section article main section h1 {
+.Header .Section .article .main .section h1 {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
@@ -62,7 +63,7 @@ html {
   padding: 0;
   margin-bottom: 1rem;
 }
-.Header section article main section p {
+.Header .Section .article .main .section p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 100;
@@ -73,7 +74,7 @@ html {
   padding: 0;
   color: hsl(0, 0%, 52%);
 }
-.Header section article main section ul {
+.Header .Section .article .main .section ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,17 +93,17 @@ html {
     grid-column-start: 1;
     grid-column-end: 13;
   }
-  .Header section {
+  .Header .Section {
     padding: 2rem 3rem;
   }
-  .Header section article header {
+  .Header .Section .article .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
     margin-bottom: 2rem;
   }
-  .Header section article header ul {
+  .Header .Section .article .header ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,13 +112,14 @@ html {
     height: 3rem;
     background-color: white;
   }
-  .Header section article main {
+  .Header .Section .article .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin: 0 2rem;
   }
-  .Header section article main section {
+  .Header .Section .article .main .section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@ html {
     align-items: center;
     padding: 2rem;
   }
-  .Header section article main section h1 {
+  .Header .Section .article .main .section h1 {
     font-family: "Poppins", sans-serif;
     font-size: 2.75rem;
     font-weight: 500;
@@ -138,7 +140,7 @@ html {
     text-align: center;
     padding: 2rem;
   }
-  .Header section article main section p {
+  .Header .Section .article .main .section p {
     font-family: "Poppins", sans-serif;
     font-size: 1.75rem;
     font-weight: 100;
@@ -150,7 +152,7 @@ html {
     color: hsl(0, 0%, 52%);
     text-align: center;
   }
-  .Header section article main section ul {
+  .Header .Section .article .main .section ul {
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
     border-radius: 2rem;
@@ -169,13 +171,13 @@ html {
   grid-column-start: 1;
   grid-column-end: 13;
 }
-.Main section {
+.Main .Section {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 3rem;
 }
-.Main section article {
+.Main .Section .article {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,10 +185,10 @@ html {
   border-radius: 0.5rem;
   box-shadow: 0 0px 20px hsl(0, 3%, 92%);
 }
-.Main section article main {
+.Main .Section .article .main {
   width: 50%;
 }
-.Main section article h2 {
+.Main .Section .article h2 {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -198,7 +200,7 @@ html {
   margin-bottom: 1rem;
   padding: 0 3rem 0 3rem;
 }
-.Main section article p {
+.Main .Section .article p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 100;
@@ -218,13 +220,13 @@ html {
     grid-column-start: 1;
     grid-column-end: 13;
   }
-  .Main section {
+  .Main .Section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 3rem;
   }
-  .Main section article {
+  .Main .Section .article {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -233,10 +235,10 @@ html {
     border-radius: 2rem;
     padding-bottom: 5rem;
   }
-  .Main section article main {
+  .Main .Section .article .main {
     width: 100%;
   }
-  .Main section article h2 {
+  .Main .Section .article h2 {
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
     font-weight: 900;
@@ -249,7 +251,7 @@ html {
     text-align: center;
     padding: 2rem;
   }
-  .Main section article p {
+  .Main .Section .article p {
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     font-weight: 100;
@@ -262,7 +264,7 @@ html {
     text-align: center;
     padding: 0rem;
   }
-  .Main section article:nth-child(2) {
+  .Main .Section .article:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,7 +283,7 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: white;
   color: hsl(192, 100%, 9%);
   width: 50vw;
   height: 250px;
@@ -292,14 +294,14 @@ html {
   z-index: 1;
   box-shadow: 0 5px 10px hsl(208, 11%, 55%);
 }
-.Aside header {
+.Aside .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
-.Aside header h3 {
+.Aside .main h3 {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -309,7 +311,7 @@ html {
   margin: 0;
   padding: 0;
 }
-.Aside header button {
+.Aside .main .button {
   background-color: hsl(322, 100%, 66%);
   color: white;
   border: none;
@@ -341,38 +343,40 @@ html {
   grid-column-start: 1;
   grid-column-end: 13;
 }
-.Footer header figure {
+.Footer .header .figure {
   padding: 2rem;
 }
-.Footer main section {
+.Footer .main .section {
   display: flex;
   justify-content: space-between;
 }
-.Footer main section article {
+.Footer .main .section .article {
   display: flex;
   justify-content: space-around;
   align-items: first baseline;
 }
-.Footer main section article ul li {
+.Footer .main .section .article .ul .li {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: left;
+  text-align: left;
   padding: 1rem;
 }
-.Footer main section article figure {
+.Footer .main .section .article .figure {
   margin: 0rem 1rem;
 }
-.Footer main section article ul li a {
+.Footer .main .section .article .ul .li a {
   display: inline-flex;
   flex-direction: row;
+  text-align: left;
   color: white;
   text-decoration: none;
 }
-.Footer main section article:nth-child(1) {
+.Footer .main .section .article:nth-child(1) {
   width: 40%;
 }
-.Footer main section article:nth-child(1) ul li {
+.Footer .main .section .article:nth-child(1) .ul .li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -380,23 +384,27 @@ html {
   padding: 1rem;
   align-items: first baseline;
 }
-.Footer main section article:nth-child(1) figure {
+.Footer .main .section .article:nth-child(1) .figure {
   margin: 0rem 1rem;
 }
-.Footer main section article:nth-child(4) ul {
+.Footer .main .section .article:nth-child(4) .ul {
   display: flex;
   flex-direction: row;
   padding: 2rem;
 }
-.Footer main section article:nth-child(4) ul li {
+.Footer .main .section .article:nth-child(4) .ul .li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 30%;
   padding: 1rem;
 }
-.Footer footer {
+.Footer .footer {
   margin: 0;
   text-align: right;
 }
-.Footer footer p {
+.Footer .footer p {
   margin-top: 1rem;
   font-size: 0.85rem;
 }
@@ -405,58 +413,58 @@ html {
   .Footer {
     padding: 8rem 1rem 3rem 1rem;
   }
-  .Footer header figure {
+  .Footer .header .figure {
     padding: 2rem;
   }
-  .Footer main section {
+  .Footer .main .section {
     display: flex;
     flex-direction: column;
   }
-  .Footer main section article {
+  .Footer .main .section .article {
     display: flex;
     align-items: start;
     justify-content: start;
     margin: 0rem 0rem;
   }
-  .Footer main section article ul li {
+  .Footer .main .section .article .ul .li {
     padding: 1rem;
   }
-  .Footer main section article figure {
+  .Footer .main .section .article .figure {
     margin: 0rem 0rem;
   }
-  .Footer main section article ul li a {
+  .Footer .main .section .article .ul .li a {
     color: white;
     text-decoration: none;
   }
-  .Footer main section article:nth-child(1) {
+  .Footer .main .section .article:nth-child(1) {
     width: 100%;
     align-items: start;
     justify-content: start;
     margin: 0rem;
     padding: 0rem;
   }
-  .Footer main section article:nth-child(1) ul li {
+  .Footer .main .section .article:nth-child(1) .ul .li {
     display: flex;
     align-items: center;
     justify-content: left;
   }
-  .Footer main section article:nth-child(1) figure {
+  .Footer .main .section .article:nth-child(1) .figure {
     margin: 0rem 1rem;
   }
-  .Footer main section article:nth-child(4) {
+  .Footer .main .section .article:nth-child(4) {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .Footer main section article:nth-child(4) ul li {
+  .Footer .main .section .article:nth-child(4) .ul .li {
     width: 100%;
     padding: 1rem;
   }
-  .Footer footer {
+  .Footer .footer {
     margin: 0;
     text-align: right;
   }
-  .Footer footer p {
+  .Footer .footer p {
     margin-top: 1rem;
     font-size: 1rem;
     text-align: center;

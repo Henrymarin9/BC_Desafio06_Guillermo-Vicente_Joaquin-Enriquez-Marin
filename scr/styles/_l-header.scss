@@ -11,10 +11,10 @@
 
     @include M.Grilla(1, 2, 1, 13);
 
-    & section {
+    & .Section {
         padding: 2rem 3rem;
 
-        & article header {
+        & .article .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -32,12 +32,13 @@
             }
         }
 
-        & article main {
+        & .article .main {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin: 0 3rem;
 
-            & section {
+            & .section {
                 width: 50%;
 
                 & h1 {
@@ -72,10 +73,10 @@
     .Header {
         @include M.Grilla(1, 2, 1, 13);
 
-        & section {
+        & .Section {
             padding: 2rem 3rem;
 
-            & article header {
+            & .article .header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -93,13 +94,14 @@
                 }
             }
 
-            & article main {
+            & .article .main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+                margin: 0 2rem;
 
-                & section {
+                & .section {
                     width: 100%;
                     display: flex;
                     flex-direction: column;
