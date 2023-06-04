@@ -1,21 +1,38 @@
 html {
-  font-size: 18px;
-  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.Body {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 .Header {
   background-image: url(./img/bg-hero-desktop.svg);
   background-color: hsl(193, 100%, 96%);
   font-family: "Poppins", sans-serif;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 13;
 }
 .Header section {
-  padding: 2rem 5rem;
+  padding: 2rem 3rem;
 }
 .Header section article header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
 }
 .Header section article header ul {
   display: flex;
@@ -31,13 +48,32 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-.Header section article main div {
-  width: 30%;
+.Header section article main section {
+  width: 50%;
 }
-.Header section article main div h1 {
+.Header section article main section h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
-.Header section article main div ul {
+.Header section article main section p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  color: hsl(0, 0%, 52%);
+}
+.Header section article main section ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,25 +85,382 @@ html {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .Header {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .Header section {
+    padding: 2rem 3rem;
+  }
+  .Header section article header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  .Header section article header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    width: 15rem;
+    height: 3rem;
+    background-color: white;
+  }
+  .Header section article main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Header section article main section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .Header section article main section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: hsl(192, 100%, 9%);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .Header section article main section p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 100;
+    line-height: 1.5;
+    color: hsl(192, 100%, 9%);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: hsl(0, 0%, 52%);
+    text-align: center;
+  }
+  .Header section article main section ul {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    width: 30rem;
+    height: 4rem;
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+  }
+}
 .Main {
   font-family: "Open Sans", sans-serif;
-  margin: 10rem 15rem;
+  margin: 7rem 0 5rem 0;
+  padding: 3rem 6rem 3rem 6rem;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 13;
 }
 .Main section {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 3rem;
 }
 .Main section article {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
-  padding: 5rem;
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0px 20px hsl(0, 3%, 92%);
 }
 .Main section article main {
   width: 50%;
+}
+.Main section article h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2;
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+  padding: 0 3rem 0 3rem;
+}
+.Main section article p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2;
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  color: hsl(0, 0%, 52%);
+  padding: 0 3rem 0 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+  .Main section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 3rem;
+  }
+  .Main section article {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    padding-bottom: 5rem;
+  }
+  .Main section article main {
+    width: 100%;
+  }
+  .Main section article h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2;
+    color: hsl(192, 100%, 9%);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .Main section article p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1;
+    color: hsl(192, 100%, 9%);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: hsl(0, 0%, 52%);
+    text-align: center;
+    padding: 0rem;
+  }
+  .Main section article:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    border-radius: 2rem;
+  }
+}
+.Aside {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: hsl(192, 100%, 9%);
+  width: 50vw;
+  height: 250px;
+  padding: 1rem 0 0 0;
+  border-radius: 1rem;
+  margin: 0 25vw;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 10px hsl(208, 11%, 55%);
+}
+.Aside header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.Aside header h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: hsl(192, 100%, 9%);
+  color: hsl(192, 100%, 9%);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.Aside header button {
+  background-color: hsl(322, 100%, 66%);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.5rem 5rem 1.25rem 5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  cursor: pointer;
+  box-shadow: 0 7px 20px 0 hsl(0, 0%, 52%);
+}
+
+@media screen and (max-width: 768px) {
+  .Aside {
+    width: 90vw;
+    text-align: center;
+    margin: 0 5vw;
+  }
+}
+.Footer {
+  background-color: hsl(192, 100%, 9%);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: -5.5rem 0 0rem 0;
+  padding: 8rem 5rem 3rem 5rem;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+.Footer header figure {
+  padding: 2rem;
+}
+.Footer main section {
+  display: flex;
+  justify-content: space-between;
+}
+.Footer main section article {
+  display: flex;
+  justify-content: space-around;
+  align-items: first baseline;
+}
+.Footer main section article ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+}
+.Footer main section article figure {
+  margin: 0rem 1rem;
+}
+.Footer main section article ul li a {
+  display: inline-flex;
+  flex-direction: row;
+  color: white;
+  text-decoration: none;
+}
+.Footer main section article:nth-child(1) {
+  width: 40%;
+}
+.Footer main section article:nth-child(1) ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+  align-items: first baseline;
+}
+.Footer main section article:nth-child(1) figure {
+  margin: 0rem 1rem;
+}
+.Footer main section article:nth-child(4) ul {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+.Footer main section article:nth-child(4) ul li {
+  width: 30%;
+  padding: 1rem;
+}
+.Footer footer {
+  margin: 0;
+  text-align: right;
+}
+.Footer footer p {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer {
+    padding: 8rem 1rem 3rem 1rem;
+  }
+  .Footer header figure {
+    padding: 2rem;
+  }
+  .Footer main section {
+    display: flex;
+    flex-direction: column;
+  }
+  .Footer main section article {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin: 0rem 0rem;
+  }
+  .Footer main section article ul li {
+    padding: 1rem;
+  }
+  .Footer main section article figure {
+    margin: 0rem 0rem;
+  }
+  .Footer main section article ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .Footer main section article:nth-child(1) {
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+    margin: 0rem;
+    padding: 0rem;
+  }
+  .Footer main section article:nth-child(1) ul li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .Footer main section article:nth-child(1) figure {
+    margin: 0rem 1rem;
+  }
+  .Footer main section article:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Footer main section article:nth-child(4) ul li {
+    width: 100%;
+    padding: 1rem;
+  }
+  .Footer footer {
+    margin: 0;
+    text-align: right;
+  }
+  .Footer footer p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

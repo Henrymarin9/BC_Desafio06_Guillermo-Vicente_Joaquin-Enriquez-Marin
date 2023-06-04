@@ -1,6 +1,14 @@
 @charset "UFT-8";
+@use "./h-colors" as C;
+@use "./_h-fonts" as F;
+@use "./mixins.scss" as M;
 
 html{
-    font-size: 18px;
-    line-height: 1.5;
+    @include M.Texto(F.$f-poppins, 1rem, 500, 1);
+}
+
+.Body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(12, 1fr);
 }

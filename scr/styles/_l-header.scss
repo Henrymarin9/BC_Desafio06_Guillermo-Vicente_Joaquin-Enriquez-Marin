@@ -1,20 +1,25 @@
 @charset "UFT-8";
 @use "./h-fonts" as F;
 @use "./h-colors" as C;
+@use "./mixins.scss" as M;
+@use "_h-breakPoints" as BP;
 
-.Header{
+.Header {
     background-image: url(./img/bg-hero-desktop.svg);
     background-color: C.$c-cyanPale;
     font-family: F.$f-poppins;
 
-    & section{
-        padding: 2rem 5rem;
-        
+    @include M.Grilla(1, 2, 1, 13);
+
+    & section {
+        padding: 2rem 3rem;
+
         & article header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 5rem;
+            padding: 3rem;
+            margin-bottom: 2rem;
 
             & ul {
                 display: flex;
@@ -31,16 +36,21 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            
-            & div{
-                width: 30%;
-                
 
-                & h1{
-                    font-size: 2.5rem;
+            & section {
+                width: 50%;
 
+                & h1 {
+                    @include M.Texto(F.$f-poppins, 2.5rem, 500, 1.5);
+                    margin-bottom: 1rem;
                 }
-                & ul{
+
+                & p {
+                    @include M.Texto(F.$f-poppins, 1rem, 100, 1.5);
+                    color: C.$c-grey;
+                }
+
+                & ul {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -51,9 +61,76 @@
                     background-color: C.$c-pink;
                     color: C.$c-white;
                 }
-
             }
         }
-            
+
+    }
+}
+
+//cuando sea menor 768px
+@media screen and (max-width: BP.$breakPoint--md) {
+    .Header {
+        @include M.Grilla(1, 2, 1, 13);
+
+        & section {
+            padding: 2rem 3rem;
+
+            & article header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2rem;
+                margin-bottom: 2rem;
+
+                & ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 2rem;
+                    width: 15rem;
+                    height: 3rem;
+                    background-color: C.$c-white;
+                }
+            }
+
+            & article main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                & section {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2rem;
+
+                    & h1 {
+                        @include M.Texto(F.$f-poppins, 2.75rem, 500, 1.5);
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        padding: 2rem;
+                    }
+
+                    & p {
+                        @include M.Texto(F.$f-poppins, 1.75rem, 100, 1.5);
+                        color: C.$c-grey;
+                        text-align: center
+                    }
+
+                    & ul {
+                        margin-bottom: 2.5rem;
+                        margin-top: 2.5rem;
+                        border-radius: 2rem;
+                        width: 30rem;
+                        height: 4rem;
+                        background-color: C.$c-pink;
+                        color: C.$c-white;
+                    }
+                }
+            }
+        }
     }
 }

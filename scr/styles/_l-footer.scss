@@ -1,0 +1,160 @@
+@use "./h-fonts" as F;
+@use "./h-colors" as C;
+@use "./mixins.scss" as M;
+@use "_h-breakPoints" as BP;
+
+.Footer {
+  background-color: C.$c-cyanDark;
+  font-family: F.$f-poppins;
+  color: C.$c-white;
+  margin: -5.5rem 0 0rem 0;
+  padding: 8rem 5rem 3rem 5rem;
+
+  @include M.Grilla(4, 5, 1, 13);
+
+
+  & header figure {
+    padding: 2rem;
+  }
+
+  & main section {
+    display: flex;
+    justify-content: space-between;
+
+    & article {
+      display: flex;
+      justify-content: space-around;
+      align-items: first baseline;
+
+      & ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        padding: 1rem;
+      }
+
+      & figure {
+        margin: 0rem 1rem;
+      }
+      & ul li a {
+        display: inline-flex;
+        flex-direction: row;
+        color: C.$c-white;
+        text-decoration: none;
+      }
+    }
+
+    & article:nth-child(1) {
+      width: 40%;
+
+      & ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        padding: 1rem;
+        align-items: first baseline;
+      }
+
+      & figure {
+        margin: 0rem 1rem;
+      }
+    }
+
+    & article:nth-child(4) ul {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem;
+    }
+
+    & article:nth-child(4) ul li {
+        width: 30%;
+      padding: 1rem;
+    }
+  }
+
+  & footer {
+    margin: 0;
+    text-align: right;
+
+    & p {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+//cuando sea menor 768px
+@media screen and (max-width: BP.$breakPoint--md) {
+  .Footer {
+    padding: 8rem 1rem 3rem 1rem;
+
+    & header figure {
+      padding: 2rem;
+    }
+    & main section {
+      display: flex;
+      flex-direction: column;
+
+      & article {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        margin: 0rem 0rem;
+
+        & ul li {
+          padding: 1rem;
+        }
+
+        & figure {
+          margin: 0rem 0rem;
+        }
+        & ul li a {
+          color: C.$c-white;
+          text-decoration: none;
+        }
+      }
+
+      & article:nth-child(1) {
+        width: 100%;
+        align-items: start;
+        justify-content: start;
+        margin: 0rem;
+        padding: 0rem;
+
+        & ul li {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+        }
+
+        & figure {
+          margin: 0rem 1rem;
+        }
+      }
+
+      & article:nth-child(4) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      & article:nth-child(4) ul li {
+          width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    & footer {
+      margin: 0;
+      text-align: right;
+
+      & p {
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
