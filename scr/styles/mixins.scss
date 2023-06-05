@@ -28,3 +28,7 @@
     grid-column-start: $gridColumnStart;
     grid-column-end: $gridColumnEnd;
 }
+
+ @mixin opacidad ($opacidad){
+    opacity: $opacidad;
+ }

@@ -43,6 +43,9 @@ html {
   height: 3rem;
   background-color: white;
 }
+.Header .Section .article .header ul:hover {
+  opacity: 0.8;
+}
 .Header .Section .article .main {
   display: flex;
   align-items: center;
@@ -84,6 +87,9 @@ html {
   height: 4rem;
   background-color: hsl(322, 100%, 66%);
   color: white;
+}
+.Header .Section .article .main .section ul:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
@@ -324,6 +330,9 @@ html {
   cursor: pointer;
   box-shadow: 0 7px 20px 0 hsl(0, 0%, 52%);
 }
+.Aside .button:hover {
+  opacity: 0.8;
+}
 
 @media screen and (max-width: 768px) {
   .Aside {
@@ -372,6 +381,9 @@ html {
   text-align: left;
   color: white;
   text-decoration: none;
+}
+.Footer .main .section .article .ul .li a:hover {
+  text-decoration: underline;
 }
 .Footer .main .section .article:nth-child(1) {
   width: 40%;

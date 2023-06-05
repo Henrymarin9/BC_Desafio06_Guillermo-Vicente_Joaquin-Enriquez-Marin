@@ -45,6 +45,9 @@
         color: C.$c-white;
         text-decoration: none;
       }
+      & .ul .li a:hover{
+        text-decoration: underline;
+      }
     }
 
     & .article:nth-child(1) {
@@ -78,7 +81,7 @@
       width: 30%;
       padding: 1rem;
     }
-  }
+  }  
 
   & .footer {
     margin: 0;

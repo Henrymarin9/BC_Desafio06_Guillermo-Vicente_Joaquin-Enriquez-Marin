@@ -30,6 +30,9 @@
                 height: 3rem;
                 background-color: C.$c-white;
             }
+            & ul:hover {
+                opacity: C.$opacidad;
+            }
         }
 
         & .article .main {
@@ -61,6 +64,9 @@
                     height: 4rem;
                     background-color: C.$c-pink;
                     color: C.$c-white;
+                }
+                & ul:hover {
+                    opacity: C.$opacidad;
                 }
             }
         }

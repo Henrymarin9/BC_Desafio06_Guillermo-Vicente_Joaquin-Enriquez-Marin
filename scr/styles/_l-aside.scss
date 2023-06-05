@@ -45,6 +45,9 @@
         cursor: pointer;
         box-shadow: 0 7px 20px 0 C.$c-grey;
     }
+    & .button:hover {
+        opacity: C.$opacidad;
+    }
 }
 
 
