@@ -14,7 +14,16 @@
 
   & .header .figure {
     padding: 2rem;
+    
   }
+
+  &  img{
+    filter: sepia(100%) saturate(0%) hue-rotate(87deg) brightness(100%) contrast(100%);
+   }
+  
+  & .svg {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(87deg) brightness(100%) contrast(100%);
+}
 
   & .main .section {
     display: flex;
