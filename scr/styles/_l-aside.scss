@@ -28,8 +28,9 @@
         padding: 2rem;
     }
 
-    & .main  h3 {
+    & .main h3 {
         @include M.Texto(F.$f-poppins, 2rem, 400, C.$c-cyanDark);
+        text-align: center;
     }
 
     & .main .button {
@@ -37,7 +38,7 @@
         color: C.$c-white;
         border: none;
         border-radius: 2rem;
-        padding: 1.5rem 5rem 1.25rem 5rem;
+        padding: 1.5rem 4rem 1.25rem 4rem;
         font-family: F.$f-poppins;
         font-size: 1.5rem;
         font-weight: 700;
@@ -45,11 +46,34 @@
         cursor: pointer;
         box-shadow: 0 7px 20px 0 C.$c-grey;
     }
+
     & .button:hover {
         opacity: C.$opacidad;
     }
 }
 
+//cuando sea menor 1100
+@media screen and (max-width: BP.$breakPoint--xl) {
+    .Aside {
+        & .main .button {
+            background-color: C.$c-pink;
+            color: C.$c-white;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1.5rem 4rem 1.25rem 4rem;
+            font-family: F.$f-poppins;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 2rem 1rem 1rem 1rem;
+            cursor: pointer;
+            box-shadow: 0 7px 20px 0 C.$c-grey;
+        }
+
+        & .button:hover {
+            opacity: C.$opacidad;
+        }
+    }
+}
 
 //cuando sea menor 768px
 @media screen and (max-width: BP.$breakPoint--md) {
@@ -57,5 +81,36 @@
         width: 90vw;
         text-align: center;
         margin: 0 5vw;
+
+        & .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        & .main h3 {
+            @include M.Texto(F.$f-poppins, 1.5rem, 400, C.$c-cyanDark);
+            text-align: center;
+        }
+
+        & .main .button {
+            background-color: C.$c-pink;
+            color: C.$c-white;
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1.5rem 4rem 1.25rem 4rem;
+            font-family: F.$f-poppins;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 2rem 1rem 1rem 1rem;
+            cursor: pointer;
+            box-shadow: 0 7px 20px 0 C.$c-grey;
+        }
+
+        & .button:hover {
+            opacity: C.$opacidad;
+        }
     }
 }
